@@ -64,7 +64,7 @@ header img {
     z-index: 1000; /* Ensure navbar is on top */
   }
   body {
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
   }
 }
 
