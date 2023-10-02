@@ -99,10 +99,10 @@ function App() {
             <li>JavaScript</li>
             <li>React</li>
             <li>C#</li>
-            <li>ASP</li>
             <li>.NET</li>
             <li>Azure</li>
             <li>SQL</li>
+            <li>UI/UX</li>
             <li>CI/CD</li>
             <li>Agile Methodologies</li>
           </ul>
