@@ -1,0 +1,177 @@
+body::before {
+  background-position: center calc(50% - var(--scroll-amount) * 0.5);
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: sepia(1) brightness(0.15);
+}
+
+body {
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: black;
+  font-family: "Quicksand", sans-serif;
+  color: #eee;
+}
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 0 0;
+}
+header {
+  margin: 0;
+  height: auto;
+}
+header img {
+  width: 100%; /* Set width as per requirement */
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 50px;
+}
+@media (max-width: 400px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 0; /* Optional padding for better appearance */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Optional background for visibility */
+    justify-content: space-between; /* Evenly space the icons */
+    margin-top: 0;
+    height: 50px;
+    z-index: 1000; /* Ensure navbar is on top */
+  }
+  body {
+    margin-bottom: 5rem;
+  }
+}
+
+main {
+  width: 80%; /* Added for some horizontal padding */
+  text-align: center; /* To center-align the text */
+  margin-top: 3rem; /* Provide some spacing */
+}
+h1 {
+  color: #9d6a30;
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+h2 {
+  color: #9d6a30;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+p {
+  color: #b4b6bd;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+section {
+  margin-top: 2rem;
+}
+section h3 {
+  color: #9d6a30;
+  font-size: 2rem;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+ul li {
+  padding-bottom: 1rem;
+}
+
+li a {
+  color: #b4b6bd;
+
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+li a:hover {
+  color: #9d6a30; /* Change color on hover for interactivity */
+}
+
+/* For the Skills section */
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.skillList li {
+  padding: 0.5rem 1rem;
+  background-color: rgba(
+    141,
+    135,
+    93,
+    0.2
+  ); /* Slight background for distinction */
+  border-radius: 8px; /* Soft rounded corners */
+}
+
+/* Contact section and footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer h3 {
+  color: #9d6a30;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  color: #b4b6bd;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: #b4b6bd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #9d6a30;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialMedia i {
+  color: #b4b6bd;
+  font-size: 1.5rem; /* size of the icons */
+}
