@@ -65,7 +65,7 @@ function App() {
     <p>
         Educated at Helsinki Business College, I've refined my skills to fulfill my lifelong passion for technology. My journey in the world of tech is a testament to my love for innovation and the drive to solve complex problems.
     </p>
-    <br />
+    <hr/>
     <p>
         Dive deep into my technical endeavors, from innovative coding projects to the latest in software development trends. With my honed problem-solving skills, let's collaborate and redefine the tech frontier!
     </p>

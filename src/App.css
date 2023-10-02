@@ -64,10 +64,14 @@ header img {
     z-index: 1000; /* Ensure navbar is on top */
   }
   body {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 }
-
+hr {
+    width: 60%;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+}
 main {
   width: 80%; /* Added for some horizontal padding */
   text-align: center; /* To center-align the text */
@@ -85,7 +89,7 @@ h2 {
 }
 p {
   color: #b4b6bd;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
