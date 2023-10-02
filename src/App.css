@@ -43,7 +43,7 @@ header img {
   justify-content: space-between;
   height: 50px;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .navbar {
     position: fixed;
     bottom: 0;
