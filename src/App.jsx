@@ -60,13 +60,16 @@ function App() {
           </nav>
         </header>
         <main id="home-section">
-          <h1>Welcome to Macce's Portfolio</h1>
-          <h2>Dedicated to crafting digital experiences that resonate.</h2>
-          <p>
-            Discover my journey, passion, and the projects that have carved my
-            path in the digital realm. Let's build something amazing together!
-          </p>
-        </main>
+          <h1>Welcome to my Portfolio</h1>
+          <h2>Engineering Seamless Digital Solutions.</h2>
+    <p>
+        Educated at Helsinki Business College, I've refined my skills to fulfill my lifelong passion for technology. My journey in the world of tech is a testament to my love for innovation and the drive to solve complex problems.
+    </p>
+    <br />
+    <p>
+        Dive deep into my technical endeavors, from innovative coding projects to the latest in software development trends. With my honed problem-solving skills, let's collaborate and redefine the tech frontier!
+    </p>
+</main>
         <section id="projects-section">
           <h3>Featured Projects</h3>
           <ul>
