@@ -74,9 +74,11 @@ header img {
 }
 main,
 section {
+  
   width: 100%;
   margin-top: 4rem;
 }
+
 
 h1 {
   color: #9d6a30;

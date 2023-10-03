@@ -32,6 +32,9 @@ function App() {
   useEffect(() => {
     const navbar = document.getElementById("navbar");
     const navmain = document.getElementById("navmain");
+    const main = document.getElementById("home-section");
+    const firstP = document.querySelector("#home-section p");
+
     let sticky = false; // to track the state
 
     const handleScroll = () => {
@@ -47,6 +50,10 @@ function App() {
         // Change navbar styles
         navbar.style.flexDirection = "row";
         navbar.style.backgroundColor = "rgba(0,0,0,0.8)";
+        navbar.style.height = "50px";
+        main.style.textAlign = "center";
+        main.style.width = "100%";
+        firstP.style.textAlign = "center";
         // Remove flex from #navmain
         navmain.style.display = "block";
         sticky = true;
@@ -55,6 +62,9 @@ function App() {
         navbar.style.flexDirection = "column";
         navbar.style.height = "auto";
         navbar.style.backgroundColor = "transparent";
+        main.style.textAlign = "left";
+        main.style.width = "100%";
+        firstP.style.textAlign = "left";
         // Add flex back to #navmain
         navmain.style.display = "flex";
         sticky = false;
@@ -69,7 +79,7 @@ function App() {
 
   function scrollToTop() {
     window.scrollTo({
-      top: 0,
+      top: 300,
       behavior: "smooth",
     });
   }
