@@ -158,6 +158,10 @@ li a:hover {
   text-decoration: none;
   transition: color 0.3s;
 }
+.contact a:hover {
+  color: #9d6a30;
+  animation: spinAndGrow 0.3s linear forwards;
+}
 .socialMedia a i:hover {
   color: #9d6a30;
   animation: spinAndGrow 0.3s linear forwards;
