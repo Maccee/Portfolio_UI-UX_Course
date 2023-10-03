@@ -75,10 +75,9 @@ function App() {
         <header>
           <img src={logo} alt="logo" />
         </header>
-        
+
         <hr />
         <nav className="navbar" id="navbar">
-          
           <img src={home} alt="Home Icon" onClick={scrollToTop} />
           <img
             src={portfolioIcon}
@@ -91,12 +90,10 @@ function App() {
             onClick={() => scrollToSection("skills-section")}
           />
           <img src={user} alt="User Icon" onClick={() => scrollToFooter()} />
-          
         </nav>
-        
+
         <main id="home-section">
           <h1>&lt;!-- Welcome to my Portfolio --&gt;</h1>
-          
 
           <p>
             I'm Marcus, an enthusiastic digital engineer driven by innovation
