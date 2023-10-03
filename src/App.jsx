@@ -31,32 +31,17 @@ function App() {
 
   useEffect(() => {
     const navbar = document.getElementById("navbar");
-    
-    
-
-    let sticky = false; // to track the state
+    const initialOffsetTop = navbar.offsetTop;  // Store the initial offset value
+    let sticky = false;
 
     const handleScroll = () => {
-      // Check if it's mobile view
-      if (window.innerWidth <= 600) {
-        return; // exit the function early if mobile view
-      }
+      if (window.innerWidth <= 600) return;
 
-      let scrolled = window.scrollY;
-
-      // Check the position of the navbar
-      if (window.scrollY >= navbar.offsetTop && !sticky) {
-        // Change navbar styles
-        navbar.style.flexDirection = "row";
+      if (window.scrollY >= initialOffsetTop && !sticky) {
         navbar.style.backgroundColor = "rgba(0,0,0,0.8)";
-        
-        
-        
         sticky = true;
-      } else if (window.scrollY < navbar.offsetTop && sticky) {
-       
+      } else if (window.scrollY < initialOffsetTop && sticky) {
         navbar.style.backgroundColor = "transparent";
-       
         sticky = false;
       }
     };
@@ -65,7 +50,8 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+}, []);
+
 
   function scrollToTop() {
     window.scrollTo({
@@ -76,7 +62,7 @@ function App() {
 
   function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({
-      
+
       behavior: "smooth",
     });
   }
