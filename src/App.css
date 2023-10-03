@@ -100,30 +100,27 @@ hr {
   transition: background-color 0.3s ease;
 }
 .navbar img:hover {
-  animation: spinforward 0.3s linear forwards;
+  animation: grow 0.1s linear forwards;
 }
 .navbar img:not(:hover) {
-  animation: spinbackward 0.2s linear;
+  animation: shrink 0.1s linear;
 }
-@keyframes spinforward {
+@keyframes grow {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1.1);
   }
 }
-@keyframes spinbackward {
+@keyframes shrink {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1.1);
   }
-
   100% {
-    transform: rotate(-360deg);
+    transform: scale(1);
   }
 }
-
-
 
 /* For the Skills section */
 .skillList {
@@ -267,4 +264,24 @@ hr {
   p {
     font-size: 1.5rem;
   }
+}
+
+@keyframes pulsate {
+  0% {
+    filter: url(#white-glow);
+    transform: scale(1);
+  }
+  50% {
+    filter: url(#white-glow);
+    transform: scale(1.1);
+  }
+  100% {
+    filter: url(#white-glow);
+    transform: scale(1);
+  }
+}
+
+.navbar img {
+  animation: pulsate 1.5s infinite;
+  transform-origin: center;
 }
