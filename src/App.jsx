@@ -8,18 +8,65 @@ import skill from "./assets/skill.svg";
 
 function App() {
   useEffect(() => {
-    const handleScroll = () => {
+    const setParallaxPosition = () => {
       let scrolled = window.scrollY;
-      const bgHeight = window.innerHeight * 1.5;
+      const bgHeight = window.innerHeight * 1.1;
       const maxScroll = bgHeight - window.innerHeight;
       const parallaxAmount = (scrolled / window.innerHeight) * maxScroll;
       document.body.style.setProperty("--scroll-amount", `${parallaxAmount}px`);
     };
+
+    const handleScroll = () => {
+      setParallaxPosition();
+    };
+
+    // Initialize the parallax position on mount
+    setParallaxPosition();
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    const navmain = document.getElementById("navmain");
+    let sticky = false; // to track the state
+
+    const handleScroll = () => {
+      // Check if it's mobile view
+      if (window.innerWidth <= 600) {
+        return; // exit the function early if mobile view
+      }
+
+      let scrolled = window.scrollY;
+
+      // Check the position of the navbar
+      if (window.scrollY >= navbar.offsetTop && !sticky) {
+        // Change navbar styles
+        navbar.style.flexDirection = "row";
+        navbar.style.backgroundColor = "rgba(0,0,0,0.8)";
+        // Remove flex from #navmain
+        navmain.style.display = "block";
+        sticky = true;
+      } else if (window.scrollY < navbar.offsetTop && sticky) {
+        // Revert navbar styles
+        navbar.style.flexDirection = "column";
+        navbar.style.height = "auto";
+        navbar.style.backgroundColor = "transparent";
+        // Add flex back to #navmain
+        navmain.style.display = "flex";
+        sticky = false;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -44,7 +91,10 @@ function App() {
       <div className="pageWrapper">
         <header>
           <img src={logo} alt="logo" />
-          <nav className="navbar">
+        </header>
+
+        <div id="navmain">
+          <nav className="navbar" id="navbar">
             <img src={home} alt="Home Icon" onClick={scrollToTop} />
             <img
               src={portfolioIcon}
@@ -58,18 +108,22 @@ function App() {
             />
             <img src={user} alt="User Icon" onClick={() => scrollToFooter()} />
           </nav>
-        </header>
-        <main id="home-section">
-          <h1>Welcome to my Portfolio</h1>
-          <h2>Engineering Seamless Digital Solutions.</h2>
-    <p>
-        Educated at Helsinki Business College, I've refined my skills to fulfill my lifelong passion for technology. My journey in the world of tech is a testament to my love for innovation and the drive to solve complex problems.
-    </p>
-    <hr/>
-    <p>
-        Dive deep into my technical endeavors, from innovative coding projects to the latest in software development trends. With my honed problem-solving skills, let's collaborate and redefine the tech frontier!
-    </p>
-</main>
+          <main id="home-section">
+            <h1>Welcome to my Portfolio</h1>
+            <h2>&lt;!-- Engineering Seamless Digital Solutions. --&gt;</h2>
+
+            <p>
+              I'm Marcus, an enthusiastic digital engineer driven by innovation
+              and creativity. Despite being at the beginning of my professional
+              journey, I possess a solid foundation in digital technologies and
+              a fervent desire to revolutionize how businesses operate in the
+              digital realm. My portfolio reflects my passion and dedication,
+              showcasing projects that highlight my ability to create
+              transformative digital solutions.
+            </p>
+          </main>
+        </div>
+
         <section id="projects-section">
           <h3>Featured Projects</h3>
           <ul>
@@ -96,8 +150,9 @@ function App() {
           <ul className="skillList">
             <li>HTML5</li>
             <li>CSS3</li>
-            <li>JavaScript</li>
             <li>React</li>
+            <li>JavaScript</li>
+
             <li>C#</li>
             <li>.NET</li>
             <li>Azure</li>
@@ -107,7 +162,7 @@ function App() {
             <li>Agile Methodologies</li>
           </ul>
         </section>
-        <footer>
+        <section className="contact">
           <h3>Contact</h3>
           <p>
             Email: <a href="mailto:macce@example.com">macce@example.com</a>
@@ -124,7 +179,7 @@ function App() {
               <i className="fab fa-github"></i>
             </a>
           </div>
-        </footer>
+        </section>
       </div>
     </>
   );
