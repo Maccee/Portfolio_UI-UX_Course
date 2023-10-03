@@ -32,8 +32,8 @@ header img {
   flex-direction: row;
 }
 .navbar {
-  margin-block-start: 3rem;
-  padding: 1.5rem 6rem 1.5rem 6rem;
+  
+  padding: 1rem 1rem 1rem 1rem;
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ header img {
   }
   .navbar {
     top: unset;
-    padding: 1.5rem;
+    padding: 1rem 0rem 1rem 0rem;
     flex-direction: row;
     position: fixed;
     bottom: 0;

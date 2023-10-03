@@ -131,6 +131,27 @@ function App() {
               showcasing projects that highlight my ability to create
               transformative digital solutions.
             </p>
+            <p>I'm Marcus, an enthusiastic digital engineer driven by innovation
+              and creativity. Despite being at the beginning of my professional
+              journey, I possess a solid foundation in digital technologies and
+              a fervent desire to revolutionize how businesses operate in the
+              digital realm. My portfolio reflects my passion and dedication,
+              showcasing projects that highlight my ability to create
+              transformative digital solutions.</p>
+              <p>I'm Marcus, an enthusiastic digital engineer driven by innovation
+              and creativity. Despite being at the beginning of my professional
+              journey, I possess a solid foundation in digital technologies and
+              a fervent desire to revolutionize how businesses operate in the
+              digital realm. My portfolio reflects my passion and dedication,
+              showcasing projects that highlight my ability to create
+              transformative digital solutions.</p>
+              <p>I'm Marcus, an enthusiastic digital engineer driven by innovation
+              and creativity. Despite being at the beginning of my professional
+              journey, I possess a solid foundation in digital technologies and
+              a fervent desire to revolutionize how businesses operate in the
+              digital realm. My portfolio reflects my passion and dedication,
+              showcasing projects that highlight my ability to create
+              transformative digital solutions.</p>
           </main>
         </div>
 
