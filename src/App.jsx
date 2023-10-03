@@ -30,14 +30,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-
     const navbar = document.getElementById("navbar");
-    const initialOffsetTop = navbar.offsetTop;  // Store the initial offset value
+    const initialOffsetTop = navbar.offsetTop; // Store the initial offset value
     let sticky = false;
-
     const handleScroll = () => {
       if (window.innerWidth <= 600) return;
-
       if (window.scrollY >= initialOffsetTop && !sticky) {
         navbar.style.backgroundColor = "rgba(0,0,0,0.8)";
         sticky = true;
@@ -53,17 +50,15 @@ function App() {
     };
   }, []);
 
-
   function scrollToTop() {
     window.scrollTo({
-      top: 200,
+      top: 230,
       behavior: "smooth",
     });
   }
 
   function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({
-
       behavior: "smooth",
     });
   }
@@ -80,8 +75,10 @@ function App() {
         <header>
           <img src={logo} alt="logo" />
         </header>
-
+        
+        <hr />
         <nav className="navbar" id="navbar">
+          
           <img src={home} alt="Home Icon" onClick={scrollToTop} />
           <img
             src={portfolioIcon}
@@ -94,10 +91,12 @@ function App() {
             onClick={() => scrollToSection("skills-section")}
           />
           <img src={user} alt="User Icon" onClick={() => scrollToFooter()} />
+          
         </nav>
+        
         <main id="home-section">
-          <h1>Welcome to my Portfolio</h1>
-          <h2>&lt;!-- Engineering Seamless Digital Solutions. --&gt;</h2>
+          <h1>&lt;!-- Welcome to my Portfolio --&gt;</h1>
+          
 
           <p>
             I'm Marcus, an enthusiastic digital engineer driven by innovation
@@ -118,13 +117,17 @@ function App() {
                 A responsive web application built with React and .NET.
               </a>
               <p>
-                This application offers a seamless user experience across devices, utilizing the power of React's front-end capabilities combined with the robustness of the .NET framework.
+                This application offers a seamless user experience across
+                devices, utilizing the power of React's front-end capabilities
+                combined with the robustness of the .NET framework.
               </p>
             </li>
             <li>
               <a href="#">A dynamic web portal using C# and ASP.</a>
               <p>
-                Designed for corporate communications, this portal supports real-time content updates and is built upon the reliability of C# and ASP's platform.
+                Designed for corporate communications, this portal supports
+                real-time content updates and is built upon the reliability of
+                C# and ASP's platform.
               </p>
             </li>
             <li>
@@ -132,13 +135,17 @@ function App() {
                 An e-commerce site with advanced CI/CD integration.
               </a>
               <p>
-                Ensuring smooth user transactions, this e-commerce site boasts of modern checkout processes. The integrated CI/CD pipelines make site updates efficient and error-free.
+                Ensuring smooth user transactions, this e-commerce site boasts
+                of modern checkout processes. The integrated CI/CD pipelines
+                make site updates efficient and error-free.
               </p>
             </li>
             <li>
               <a href="#">A data visualization dashboard using SQL and JS.</a>
               <p>
-                Transforming complex data into visual stories, this dashboard leverages SQL for data management and JavaScript for interactive visualization, offering insights at a glance.
+                Transforming complex data into visual stories, this dashboard
+                leverages SQL for data management and JavaScript for interactive
+                visualization, offering insights at a glance.
               </p>
             </li>
           </ul>

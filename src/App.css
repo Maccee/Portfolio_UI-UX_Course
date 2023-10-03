@@ -12,67 +12,83 @@ body::before {
   z-index: -2;
   filter: sepia(1) brightness(0.15);
 }
-
 body {
   overflow-anchor: none;
   margin-block-end: 20rem;
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0 0rem 0 0rem;
   background-color: black;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
   color: #eee;
 }
-
 main,
 section {
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
-
-
-
 h1 {
   text-align: center;
   color: #9d6a30;
-  font-size: 6rem;
-  margin-bottom: 0.5em;
-}
-
-h2 {
-  text-align: center;
-  color: #9d6a30;
-  font-size: 4rem;
-  margin-bottom: 1em;
+  font-size: 5rem;
+  margin-bottom: 4rem;
 }
 
 h3 {
   text-align: center;
   color: #9d6a30;
-  font-size: 4rem;
-  margin-bottom: 4rem;
+  font-size: 5rem;
+  margin-bottom: 5rem;
 }
-
 p {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   color: #b4b6bd;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.6;
 }
-
+ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+ul li {
+  padding-bottom: 1rem;
+}
+ul li p {
+  font-size: 1.5rem;
+  text-align: left;
+}
+li a {
+  color: #8d875d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+li a:hover {
+  color: #b4b6bd;
+  
+}
+header {
+  margin-block-end: 1rem;
+}
 header img {
   width: 100%;
-  max-height: 500px;
+  max-height: 350px;
   object-fit: contain;
 }
+hr {
+  color: #b4b6bd;
+  margin-block-start: 0;
+  margin-block-end: 1rem;
+}
 
+/* Navbar */
 .navbar {
-  height: 120px;
-  background-color: transparent;
-  margin-block-start: 7rem;
   padding: 1rem;
+  height: 70px;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -83,27 +99,20 @@ header img {
   z-index: 100;
   transition: background-color 0.3s ease;
 }
-
-
-
 .navbar img:hover {
   animation: spinforward 0.3s linear forwards;
 }
-
 .navbar img:not(:hover) {
   animation: spinbackward 0.2s linear;
 }
-
 @keyframes spinforward {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 @keyframes spinbackward {
   0% {
     transform: rotate(0deg);
@@ -114,40 +123,7 @@ header img {
   }
 }
 
-@media (min-width: 950px) {
-  p {
-    max-width: 70%;
-  }
-}
 
-ul {
-  text-align: center;
-  list-style-type: none;
-  padding: 0.5rem;
-  font-size: 2.5rem;
-}
-
-ul li {
-  padding-bottom: 1rem;
-}
-ul li p {
-  font-size: 2rem;
-}
-
-li a {
-  color: #8D875D;
-  
-  text-decoration: none;
-  transition: color 0.3s;
-
-}
-
-li a:hover {
-  color: #b4b6bd;
-  
-  font-weight: 600;
-  /* Change color on hover for interactivity */
-}
 
 /* For the Skills section */
 .skillList {
@@ -230,14 +206,20 @@ li a:hover {
   font-size: 2.5rem;
   /* size of the icons */
 }
-
-
+@media (min-width: 950px) {
+  p {
+    max-width: 70%;
+  }
+}
 @media (min-width: 601px) {
   #projects-section {
     scroll-margin-top: 200px;
   }
 
   #skills-section {
+    scroll-margin-top: 200px;
+  }
+  #home-section {
     scroll-margin-top: 200px;
   }
 }
@@ -248,6 +230,7 @@ li a:hover {
   }
   ul li p {
     font-size: 1.5rem;
+    text-align: center;
   }
   .navbar {
     padding: 1rem 0 1rem 0;
@@ -273,15 +256,12 @@ li a:hover {
   }
 
   h1 {
-    font-size: 5rem;
-  }
-
-  h2 {
     font-size: 3rem;
   }
 
+
   h3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   p {
