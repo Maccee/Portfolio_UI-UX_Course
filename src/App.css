@@ -60,6 +60,7 @@ header img {
     margin-top: 0;
     height: 50px;
     z-index: 1000;
+    width: 100%;
   }
   h1,
   h2 {
