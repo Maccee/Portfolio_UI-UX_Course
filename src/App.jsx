@@ -30,6 +30,8 @@ function App() {
   }, []);
 
   useEffect(() => {
+    alert(window.innerWidth);
+    alert(window.devicePixelRatio);
     const navbar = document.getElementById("navbar");
     const initialOffsetTop = navbar.offsetTop;  // Store the initial offset value
     let sticky = false;
