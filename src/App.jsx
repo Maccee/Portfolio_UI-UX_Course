@@ -56,7 +56,7 @@ function App() {
 
   function scrollToTop() {
     window.scrollTo({
-      top: 300,
+      top: 200,
       behavior: "smooth",
     });
   }
