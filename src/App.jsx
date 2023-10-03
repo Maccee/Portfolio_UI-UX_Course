@@ -30,7 +30,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    
+
     const navbar = document.getElementById("navbar");
     const initialOffsetTop = navbar.offsetTop;  // Store the initial offset value
     let sticky = false;
@@ -51,7 +51,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-}, []);
+  }, []);
 
 
   function scrollToTop() {
@@ -117,20 +117,33 @@ function App() {
               <a href="#">
                 A responsive web application built with React and .NET.
               </a>
+              <p>
+                This application offers a seamless user experience across devices, utilizing the power of React's front-end capabilities combined with the robustness of the .NET framework.
+              </p>
             </li>
             <li>
               <a href="#">A dynamic web portal using C# and ASP.</a>
+              <p>
+                Designed for corporate communications, this portal supports real-time content updates and is built upon the reliability of C# and ASP's platform.
+              </p>
             </li>
             <li>
               <a href="#">
                 An e-commerce site with advanced CI/CD integration.
               </a>
+              <p>
+                Ensuring smooth user transactions, this e-commerce site boasts of modern checkout processes. The integrated CI/CD pipelines make site updates efficient and error-free.
+              </p>
             </li>
             <li>
               <a href="#">A data visualization dashboard using SQL and JS.</a>
+              <p>
+                Transforming complex data into visual stories, this dashboard leverages SQL for data management and JavaScript for interactive visualization, offering insights at a glance.
+              </p>
             </li>
           </ul>
         </section>
+
         <section id="skills-section">
           <h3>Skills</h3>
           <ul className="skillList">
