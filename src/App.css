@@ -41,7 +41,14 @@ header img {
   z-index: 100;
   transition: background-color 0.3s ease;
 }
-
+@media (min-width: 601px) {
+  #projects-section {
+    scroll-margin-top: 170px;
+  }
+  #skills-section {
+    scroll-margin-top: 170px;
+  }
+}
 @media (max-width: 600px) {
   body {
     margin-bottom: 15rem;
@@ -59,6 +66,12 @@ header img {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     width: 100%;
+  }
+  #projects-section {
+    scroll-margin-top: 10px;
+  }
+  #skills-section {
+    scroll-margin-top: 10px;
   }
 }
 .navbar img:hover {
@@ -99,12 +112,7 @@ section {
   margin-top: 7rem;
 }
 
-#projects-section {
-  scroll-margin-top: 170px;
-}
-#skills-section {
-  scroll-margin-top: 170px;
-}
+
 
 h1 {
   text-align: center;
