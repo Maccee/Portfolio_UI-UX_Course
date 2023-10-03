@@ -146,6 +146,7 @@ li a:hover {
 /* Contact section and footer */
 
 .contact p {
+  text-align: center;
   color: #b4b6bd;
   font-size: 1.3rem;
 }
