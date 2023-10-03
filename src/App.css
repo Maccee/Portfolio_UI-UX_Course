@@ -14,7 +14,7 @@ body::before {
 }
 body {
   overflow-anchor: none;
-
+  margin-block-end: 20rem;
   padding: 0 0.5rem 0 0.5rem;
   background-color: black;
   font-family: "Quicksand", sans-serif;
@@ -27,18 +27,15 @@ header img {
   object-fit: contain;
 }
 
-#navmain {
+.navbar {
+  background-color: transparent;
+  margin-block-start: 7rem;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
-}
-.navbar {
-  padding: 1rem;
-  
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
-  gap: 4rem;
+  gap: 1rem;
+  justify-content: space-evenly;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -58,37 +55,65 @@ header img {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
     height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     width: 100%;
   }
-  h1,
-  h2 {
-    text-align: center;
+}
+.navbar img:hover {
+  animation: spinforward 0.3s linear forwards;
+}
+.navbar img:not(:hover) {
+  animation: spinbackward 0.2s linear;
+}
+@keyframes spinforward {
+  0% {
+    transform: rotate(0deg);
   }
-  #home-section p {
-    text-align: center;
-  }
-  .contact p {
-    text-align: center;
+  100% {
+    transform: rotate(360deg);
   }
 }
+@keyframes spinbackward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 main,
 section {
-  
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 7rem;
 }
 
+#projects-section {
+  scroll-margin-top: 170px;
+}
+#skills-section {
+  scroll-margin-top: 170px;
+}
 
 h1 {
+  text-align: center;
   color: #9d6a30;
   font-size: 5rem;
-
   margin-bottom: 0.5em;
 }
 h2 {
+  text-align: center;
   color: #9d6a30;
   font-size: 2.5rem;
   margin-bottom: 1em;
@@ -97,14 +122,21 @@ h3 {
   text-align: center;
   color: #9d6a30;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
-
 p {
-  text-align: left;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   color: #b4b6bd;
   font-size: 1.5rem;
   line-height: 1.6;
+}
+@media (min-width: 950px) {
+  p {
+    max-width: 70%;
+  }
 }
 
 ul {
@@ -161,7 +193,6 @@ li a:hover {
 }
 .contact a:hover {
   color: #9d6a30;
-  animation: spinAndGrow 0.3s linear forwards;
 }
 .socialMedia a i:hover {
   color: #9d6a30;
@@ -170,6 +201,7 @@ li a:hover {
 .socialMedia a:not(:hover) i {
   animation: spinAndShrink 0.2s linear;
 }
+
 @keyframes spinAndGrow {
   0% {
     transform: rotate(0deg) scale(1);
