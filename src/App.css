@@ -14,32 +14,31 @@ body::before {
 }
 body {
   overflow-anchor: none;
-  margin-block-end: 20rem;
+  margin-block-end: 15rem;
   padding: 0 0rem 0 0rem;
   background-color: black;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   font-weight: 300;
   color: #eee;
 }
 main,
 section {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 h1 {
-  
   text-align: center;
-  color: #C9904F;
+  color: #c9904f;
   font-size: 6rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 h3 {
   text-align: center;
-  color: #C9904F;
+  color: #c9904f;
   font-size: 5rem;
   font-weight: 200;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 p {
   max-width: 100%;
@@ -60,12 +59,11 @@ ul li {
   padding-bottom: 1rem;
 }
 ul li p {
-
   font-size: 1.5rem;
   text-align: center;
 }
 li a {
-  color: #C9904F;
+  color: #c9904f;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -81,7 +79,7 @@ header img {
   object-fit: contain;
 }
 hr {
-  color: #5F5E5E;
+  color: #5f5e5e;
   margin-block-start: 2rem;
   margin-block-end: 1rem;
 }
@@ -135,9 +133,8 @@ hr {
 }
 
 .skillList li {
-  
   padding: 0.5rem 1rem;
-  background-color: #5F5E5E50;
+  background-color: #5f5e5e50;
   border-radius: 0.5rem;
 }
 
@@ -145,7 +142,6 @@ hr {
   .skillList {
     width: 50%;
   }
-  
 }
 
 /* Contact section and footer */
@@ -163,11 +159,11 @@ hr {
 }
 
 .contact a:hover {
-  color: #C9904F;
+  color: #c9904f;
 }
 
 .socialMedia a i:hover {
-  color: #C9904F;
+  color: #c9904f;
   animation: spinAndGrow 0.3s linear forwards;
 }
 
@@ -262,7 +258,7 @@ hr {
     z-index: 1000;
     width: 100%;
   }
-
+ 
   #projects-section {
     scroll-margin-top: 10px;
   }
@@ -270,10 +266,10 @@ hr {
   #skills-section {
     scroll-margin-top: 10px;
   }
-body {
-  padding-inline-start: 0.2rem;
-  padding-inline-end: 0.2rem;
-}
+  body {
+    padding-inline-start: 0.2rem;
+    padding-inline-end: 0.2rem;
+  }
   h1 {
     font-size: 3rem;
   }
@@ -289,5 +285,3 @@ body {
     display: none;
   }
 }
-
-
