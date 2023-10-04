@@ -10,14 +10,14 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
-  filter: sepia(1) brightness(0.15);
+  filter: sepia(1) brightness(0.1);
 }
 body {
   overflow-anchor: none;
   margin-block-end: 20rem;
   padding: 0 0rem 0 0rem;
   background-color: black;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-weight: 300;
   color: #eee;
 }
@@ -27,16 +27,18 @@ section {
   margin-top: 4rem;
 }
 h1 {
+  
   text-align: center;
-  color: #9d6a30;
-  font-size: 5rem;
+  color: #C9904F;
+  font-size: 6rem;
   margin-bottom: 4rem;
 }
 
 h3 {
   text-align: center;
-  color: #9d6a30;
+  color: #C9904F;
   font-size: 5rem;
+  font-weight: 200;
   margin-bottom: 5rem;
 }
 p {
@@ -44,7 +46,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #b4b6bd;
+  color: #eeeeee;
   font-size: 2rem;
   line-height: 1.6;
 }
@@ -58,16 +60,17 @@ ul li {
   padding-bottom: 1rem;
 }
 ul li p {
+
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 li a {
-  color: #8d875d;
+  color: #C9904F;
   text-decoration: none;
   transition: color 0.3s;
 }
 li a:hover {
-  color: #b4b6bd;
+  color: #eeeeee;
 }
 header {
   margin-block-end: 1rem;
@@ -78,8 +81,8 @@ header img {
   object-fit: contain;
 }
 hr {
-  color: #b4b6bd;
-  margin-block-start: 0;
+  color: #5F5E5E;
+  margin-block-start: 2rem;
   margin-block-end: 1rem;
 }
 
@@ -132,8 +135,9 @@ hr {
 }
 
 .skillList li {
+  
   padding: 0.5rem 1rem;
-  background-color: #5f5e5e50;
+  background-color: #5F5E5E50;
   border-radius: 0.5rem;
 }
 
@@ -141,13 +145,14 @@ hr {
   .skillList {
     width: 50%;
   }
+  
 }
 
 /* Contact section and footer */
 
 .contact p {
   text-align: center;
-  color: #b4b6bd;
+  color: #eeeeee;
   font-size: 2rem;
 }
 
@@ -158,16 +163,27 @@ hr {
 }
 
 .contact a:hover {
-  color: #9d6a30;
+  color: #C9904F;
 }
 
 .socialMedia a i:hover {
-  color: #9d6a30;
+  color: #C9904F;
   animation: spinAndGrow 0.3s linear forwards;
 }
 
 .socialMedia a:not(:hover) i {
   animation: spinAndShrink 0.2s linear;
+}
+
+.license p {
+  max-width: 80%;
+  font-size: 1.4rem;
+}
+.license p a {
+  color: #b4b6bd;
+}
+.license .author {
+  font-size: 1.4rem;
 }
 
 @keyframes spinAndGrow {
@@ -204,7 +220,11 @@ hr {
 }
 @media (min-width: 950px) {
   p {
-    max-width: 70%;
+    max-width: 50%;
+  }
+  .license p {
+    max-width: 20%;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 601px) {
@@ -250,7 +270,10 @@ hr {
   #skills-section {
     scroll-margin-top: 10px;
   }
-
+body {
+  padding-inline-start: 0.2rem;
+  padding-inline-end: 0.2rem;
+}
   h1 {
     font-size: 3rem;
   }
@@ -262,24 +285,9 @@ hr {
   p {
     font-size: 1.5rem;
   }
-}
-
-@keyframes pulsate {
-  0% {
-    filter: url(#white-glow);
-    transform: scale(1);
-  }
-  50% {
-    filter: url(#white-glow);
-    transform: scale(1.1);
-  }
-  100% {
-    filter: url(#white-glow);
-    transform: scale(1);
+  hr {
+    display: none;
   }
 }
 
-.navbar img {
-  animation: pulsate 1.5s infinite;
-  transform-origin: center;
-}
+

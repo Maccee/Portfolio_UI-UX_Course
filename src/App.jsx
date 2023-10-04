@@ -93,16 +93,15 @@ function App() {
         </nav>
 
         <main id="home-section">
-          <h1>&lt;!-- Welcome to my Portfolio --&gt;</h1>
+          <h1>Welcome to my Portfolio</h1>
 
           <p>
-            I'm Marcus, an enthusiastic digital engineer driven by innovation
-            and creativity. Despite being at the beginning of my professional
-            journey, I possess a solid foundation in digital technologies and a
-            fervent desire to revolutionize how businesses operate in the
-            digital realm. My portfolio reflects my passion and dedication,
-            showcasing projects that highlight my ability to create
-            transformative digital solutions.
+            This portfolio chronicles a journey through digital engineering,
+            highlighting in-depth knowledge and expertise in programming. Each
+            project presented offers a glimpse into the potential of digital
+            technologies when used for transformative solutions. As visitors
+            explore, they will see tangible applications of innovation and
+            creativity in the realm of the digital domain.
           </p>
         </main>
 
@@ -181,6 +180,24 @@ function App() {
             <a href="#" aria-label="GitHub Repository">
               <i className="fab fa-github"></i>
             </a>
+          </div>
+          <div className="license">
+            <p className="author">
+              Macce 2023
+            </p>
+            <p>
+              This work is licensed under a
+              <br/>
+              <a
+                href="https://creativecommons.org/licenses/by-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Creative Commons Attribution-ShareAlike 4.0 International
+                License (CC BY-SA)
+              </a>
+              .
+            </p>
           </div>
         </section>
       </div>
