@@ -6,7 +6,7 @@ body::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(./assets/bg.png);
+  background-image: url(./assets/bgsmall.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
