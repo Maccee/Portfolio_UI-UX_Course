@@ -18,15 +18,17 @@ body {
   padding: 0 0rem 0 0rem;
   background-color: black;
   font-family: "Dosis", sans-serif;
-  font-weight: 300;
-  color: #eee;
+  font-weight: 400;
+  color: #eeeeee;
 }
 main,
 section {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
   text-align: center;
   color: #c9904f;
   font-size: 6rem;
@@ -34,32 +36,44 @@ h1 {
 }
 
 h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
   text-align: center;
   color: #c9904f;
   font-size: 5rem;
   font-weight: 200;
   margin-bottom: 6rem;
 }
+#skills-section {
+  margin-top: 4.5rem;
+  margin-bottom: 6.5rem;
+}
+.contact h3 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
 p {
+  letter-spacing: 0.15rem;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #eeeeee;
+
   font-size: 2rem;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 ul {
   text-align: center;
   list-style-type: none;
   padding: 0.5rem;
   font-size: 2rem;
+  letter-spacing: 0.15rem;
 }
 ul li {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 ul li p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 li a {
@@ -99,11 +113,17 @@ hr {
   z-index: 100;
   transition: background-color 0.3s ease;
 }
-.navbar img:hover {
+
+
+.svg-icon {
+  height: 70px;
+  transform-origin: center center;
+}
+.svg-icon:hover {
   animation: grow 0.1s linear forwards;
 }
-.navbar img:not(:hover) {
-  animation: shrink 0.1s linear;
+.svg-icon:hover .svg-path {
+  fill: #B4B6BD;
 }
 @keyframes grow {
   0% {
@@ -113,14 +133,7 @@ hr {
     transform: scale(1.1);
   }
 }
-@keyframes shrink {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 
 /* For the Skills section */
 .skillList {
@@ -238,14 +251,14 @@ hr {
 
 @media (max-width: 600px) {
   body {
-    margin-bottom: 15rem;
+    margin-bottom: 13rem;
   }
   ul li p {
     font-size: 1.5rem;
     text-align: center;
   }
   .navbar {
-    padding: 1rem 0 1rem 0;
+    padding: 0.5rem 0rem 0.5rem 0rem;
     top: unset;
     justify-content: space-evenly;
     gap: 2rem;
@@ -258,7 +271,11 @@ hr {
     z-index: 1000;
     width: 100%;
   }
- 
+  .svg-icon {
+    height: 50px;
+    
+  }
+
   #projects-section {
     scroll-margin-top: 10px;
   }

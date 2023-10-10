@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import logo from "./assets/logo.svg";
-import home from "./assets/home.svg";
-import portfolioIcon from "./assets/portfolio.svg";
-import user from "./assets/user.svg";
-import skill from "./assets/skill.svg";
+import HomeIcon from "./assets/HomeIcon";
+import PortfolioIcon from "./assets/PortfolioIcon";
+import SkillsIcon from "./assets/SkillsIcon";
+import UserIcon from "./assets/UserIcon";
 
-function App() {
+const App = () => {
   useEffect(() => {
     const setParallaxPosition = () => {
       let scrolled = window.scrollY;
@@ -50,24 +50,24 @@ function App() {
     };
   }, []);
 
-  function scrollToTop() {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 220,
       behavior: "smooth",
     });
-  }
+  };
 
-  function scrollToSection(id) {
+  const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({
       behavior: "smooth",
     });
-  }
-  function scrollToFooter() {
+  };
+  const scrollToFooter = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
-  }
+  };
 
   return (
     <>
@@ -78,18 +78,10 @@ function App() {
 
         <hr />
         <nav className="navbar" id="navbar">
-          <img src={home} alt="Home Icon" onClick={scrollToTop} />
-          <img
-            src={portfolioIcon}
-            alt="Portfolio Icon"
-            onClick={() => scrollToSection("projects-section")}
-          />
-          <img
-            src={skill}
-            alt="Skill Icon"
-            onClick={() => scrollToSection("skills-section")}
-          />
-          <img src={user} alt="User Icon" onClick={() => scrollToFooter()} />
+          <HomeIcon onClick={scrollToTop} />
+          <PortfolioIcon onClick={() => scrollToSection("projects-section")} />
+          <SkillsIcon onClick={() => scrollToSection("skills-section")} />
+          <UserIcon onClick={() => scrollToFooter()} />
         </nav>
 
         <main id="home-section">
@@ -148,13 +140,13 @@ function App() {
         </section>
 
         <section id="skills-section">
-          <h3>Skills</h3>
+          <h3>Stack</h3>
           <ul className="skillList">
             <li>HTML5</li>
             <li>CSS3</li>
             <li>React</li>
             <li>JavaScript</li>
-
+            <li>Node.js</li>
             <li>C#</li>
             <li>.NET</li>
             <li>Azure</li>
@@ -182,12 +174,10 @@ function App() {
             </a>
           </div>
           <div className="license">
-            <p className="author">
-              Macce 2023
-            </p>
+            <p className="author">Macce 2023</p>
             <p>
               This work is licensed under a
-              <br/>
+              <br />
               <a
                 href="https://creativecommons.org/licenses/by-sa/4.0/"
                 target="_blank"
@@ -203,6 +193,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
