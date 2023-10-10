@@ -98,7 +98,7 @@ const App = () => {
         </main>
 
         <section id="projects-section">
-          <h3>Featured Projects</h3>
+          <h2>Featured Projects</h2>
           <ul>
             <li>
               <a href="#">
@@ -140,7 +140,7 @@ const App = () => {
         </section>
 
         <section id="skills-section">
-          <h3>Stack</h3>
+          <h2>Stack</h2>
           <ul className="skillList">
             <li>HTML5</li>
             <li>CSS3</li>
@@ -157,7 +157,7 @@ const App = () => {
           </ul>
         </section>
         <section className="contact">
-          <h3>Contact</h3>
+          <h2>Contact</h2>
           <p>
             Email: <a href="mailto:macce@example.com">macce@example.com</a>
           </p>
