@@ -36,7 +36,7 @@ const App = () => {
     const handleScroll = () => {
       if (window.innerWidth <= 600) return;
       if (window.scrollY >= initialOffsetTop && !sticky) {
-        navbar.style.backgroundColor = "rgba(0,0,0,0.8)";
+        navbar.style.backgroundColor = "rgba(34,34,35,0.8)";
         sticky = true;
       } else if (window.scrollY < initialOffsetTop && sticky) {
         navbar.style.backgroundColor = "transparent";
@@ -52,7 +52,7 @@ const App = () => {
 
   const scrollToTop = () => {
     window.scrollTo({
-      top: 220,
+      top: 210,
       behavior: "smooth",
     });
   };
@@ -89,11 +89,17 @@ const App = () => {
 
           <p>
             This portfolio chronicles a journey through digital engineering,
-            highlighting in-depth knowledge and expertise in programming. Each
-            project presented offers a glimpse into the potential of digital
-            technologies when used for transformative solutions. As visitors
-            explore, they will see tangible applications of innovation and
-            creativity in the realm of the digital domain.
+            highlighting in-depth knowledge and expertise in programming.
+          </p>
+          <br />
+          <p>
+            Each project presented offers a glimpse into the potential of
+            digital technologies when used for transformative solutions.
+          </p>
+          <br />
+          <p>
+            As visitors explore, they will see tangible applications of
+            innovation and creativity in the realm of the digital domain.
           </p>
         </main>
 

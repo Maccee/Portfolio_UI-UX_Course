@@ -10,11 +10,11 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
-  filter: sepia(1) brightness(0.1);
+  filter: sepia(1) brightness(0.15);
 }
 body {
   overflow-anchor: none;
-  margin-block-end: 15rem;
+  margin-block-end: 5rem;
   padding: 0 0rem 0 0rem;
   background-color: black;
   font-family: "Dosis", sans-serif;
@@ -27,7 +27,7 @@ section {
   margin-top: 6rem;
 }
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   text-align: center;
   color: #c9904f;
@@ -36,7 +36,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   text-align: center;
   color: #c9904f;
@@ -114,7 +114,6 @@ hr {
   transition: background-color 0.3s ease;
 }
 
-
 .svg-icon {
   height: 70px;
   transform-origin: center center;
@@ -123,7 +122,7 @@ hr {
   animation: grow 0.1s linear forwards;
 }
 .svg-icon:hover .svg-path {
-  fill: #B4B6BD;
+  fill: #b4b6bd;
 }
 @keyframes grow {
   0% {
@@ -133,7 +132,6 @@ hr {
     transform: scale(1.1);
   }
 }
-
 
 /* For the Skills section */
 .skillList {
@@ -147,7 +145,7 @@ hr {
 
 .skillList li {
   padding: 0.5rem 1rem;
-  background-color: #5f5e5e50;
+  background-color: #5f5e5e90;
   border-radius: 0.5rem;
 }
 
@@ -232,7 +230,7 @@ hr {
     max-width: 50%;
   }
   .license p {
-    max-width: 20%;
+    max-width: 30%;
     font-size: 1.4rem;
   }
 }
@@ -251,7 +249,7 @@ hr {
 
 @media (max-width: 600px) {
   body {
-    margin-bottom: 13rem;
+    margin-bottom: 5rem;
   }
   ul li p {
     font-size: 1.5rem;
@@ -273,7 +271,6 @@ hr {
   }
   .svg-icon {
     height: 50px;
-    
   }
 
   #projects-section {
