@@ -1,5 +1,5 @@
 body::before {
-  background-position: center calc(0% - var(--scroll-amount) * 1);
+  background-position: center calc(0% - var(--scroll-amount) * 2.9);
   content: "";
   position: fixed;
   top: 0;
