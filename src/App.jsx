@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import logo from "./assets/logo.svg";
+import csharp from "./assets/csharp-icon.svg";
+import dotnet from "./assets/dotnet-icon.svg";
+import react from "./assets/react-icon.svg";
+import javascript from "./assets/javascript-icon.svg";
+import tensorflow from "./assets/tensorflow-icon.svg";
+import python from "./assets/python-icon.svg";
 import HomeIcon from "./assets/HomeIcon";
 import PortfolioIcon from "./assets/PortfolioIcon";
 import SkillsIcon from "./assets/SkillsIcon";
@@ -20,12 +26,19 @@ const App = () => {
       setParallaxPosition();
     };
 
+    const handleResize = () => {
+      setParallaxPosition();
+    };
+
     // Initialize the parallax position on mount
     setParallaxPosition();
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize); // Listen to resize event
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize); // Cleanup listener
     };
   }, []);
 
@@ -55,6 +68,8 @@ const App = () => {
       top: 210,
       behavior: "smooth",
     });
+    const navbar = document.getElementById("navbar");
+    navbar.style.backgroundColor = "transparent";
   };
 
   const scrollToSection = (id) => {
@@ -105,44 +120,62 @@ const App = () => {
 
         <section id="projects-section">
           <h2>Featured Projects</h2>
-          <ul>
-            <li>
-              <a href="#">
-                A responsive web application built with React and .NET.
-              </a>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3>
+                <a href="#">Responsive Web App</a>
+              </h3>
               <p>
-                This application offers a seamless user experience across
-                devices, utilizing the power of React's front-end capabilities
-                combined with the robustness of the .NET framework.
+                Seamless UX across devices combining React's front-end with
+                .NET's robustness.
               </p>
-            </li>
-            <li>
-              <a href="#">A dynamic web portal using C# and ASP.</a>
+              <div class="tech-stack">
+                <img src={react} alt="React" />
+                <img src={dotnet} alt=".NET" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>
+                <a href="#">Dynamic Web Portal</a>
+              </h3>
               <p>
-                Designed for corporate communications, this portal supports
-                real-time content updates and is built upon the reliability of
-                C# and ASP's platform.
+                Designed for corporate communications with real-time content
+                updates.
               </p>
-            </li>
-            <li>
-              <a href="#">
-                An e-commerce site with advanced CI/CD integration.
-              </a>
+              <div class="tech-stack">
+                <img src={csharp} alt="C#" />
+                <img src={dotnet} alt="ASP" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>
+                <a href="#">E-commerce Platform</a>
+              </h3>
               <p>
-                Ensuring smooth user transactions, this e-commerce site boasts
-                of modern checkout processes. The integrated CI/CD pipelines
-                make site updates efficient and error-free.
+                A scalable solution for online sales, integrated with popular
+                payment gateways and inventory management.
               </p>
-            </li>
-            <li>
-              <a href="#">A data visualization dashboard using SQL and JS.</a>
+              <div class="tech-stack">
+                <img src={javascript} alt="JavaScript" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>
+                <a href="#">AI Chatbot System</a>
+              </h3>
               <p>
-                Transforming complex data into visual stories, this dashboard
-                leverages SQL for data management and JavaScript for interactive
-                visualization, offering insights at a glance.
+                Integrates with websites and apps to provide real-time customer
+                support using advanced machine learning.
               </p>
-            </li>
-          </ul>
+              <div class="tech-stack">
+                <img src={python} alt="Python" />
+                <img src={tensorflow} alt="TensorFlow" />
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="skills-section">

@@ -1,5 +1,5 @@
 body::before {
-  background-position: center calc(50% - var(--scroll-amount) * 0.9);
+  background-position: center calc(0% - var(--scroll-amount) * 1);
   content: "";
   position: fixed;
   top: 0;
@@ -7,7 +7,7 @@ body::before {
   bottom: 0;
   left: 0;
   background-image: url(./assets/bgsmall.webp);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   z-index: -2;
   filter: sepia(1) brightness(0.15);
@@ -44,6 +44,21 @@ h2 {
   font-weight: 200;
   margin-bottom: 6rem;
 }
+h3 {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+}
+h3 a {
+  color: #c9904f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+h3 a:hover {
+  color: #eeeeee;
+}
+
 #skills-section {
   margin-top: 4.5rem;
   margin-bottom: 6.5rem;
@@ -58,7 +73,6 @@ p {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-
   font-size: 2rem;
   line-height: 1.4;
 }
@@ -76,14 +90,7 @@ ul li p {
   font-size: 1.6rem;
   text-align: center;
 }
-li a {
-  color: #c9904f;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-li a:hover {
-  color: #eeeeee;
-}
+
 header {
   margin-block-end: 1rem;
 }
@@ -133,6 +140,47 @@ hr {
   }
 }
 
+#projects-section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* space between cards */
+  justify-content: center; /* evenly space the cards */
+  margin: 1rem;
+}
+
+.project-card {
+  position: relative;
+  background-color: #222223;
+  width: 200px;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  padding-block-end: 3rem;
+}
+.project-card p {
+  font-size: 1.3rem;
+}
+
+.tech-stack {
+  position: absolute;
+  bottom: 1rem;       /* This is added */
+  right: 1rem;        /* This is added */
+  
+  text-align: right;
+}
+
+.tech-stack img {
+  margin-right: 0.5rem; /* space between icons */
+  width: 24px; /* or any size you prefer */
+  height: 24px;
+}
+
 /* For the Skills section */
 .skillList {
   display: flex;
@@ -145,7 +193,7 @@ hr {
 
 .skillList li {
   padding: 0.5rem 1rem;
-  background-color: #5f5e5e90;
+  background-color: #222223;
   border-radius: 0.5rem;
 }
 
@@ -226,8 +274,11 @@ hr {
   /* size of the icons */
 }
 @media (min-width: 950px) {
-  p {
+  #home-section p {
     max-width: 50%;
+  }
+  .projects-grid {
+    width: 70%;
   }
   .license p {
     max-width: 30%;
