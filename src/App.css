@@ -212,13 +212,13 @@ hr {
 }
 
 .contact a {
-  color: #b4b6bd;
+  color: #c9904f;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact a:hover {
-  color: #c9904f;
+  color: #b4b6bd;
 }
 
 .socialMedia a i:hover {
@@ -235,7 +235,7 @@ hr {
   font-size: 1.4rem;
 }
 .license p a {
-  color: #b4b6bd;
+  color: #c9904f;
 }
 .license .author {
   font-size: 1.4rem;
@@ -295,6 +295,11 @@ hr {
   }
   #home-section {
     scroll-margin-top: 200px;
+  }
+  .contact a {
+    color: #c9904f;
+    text-decoration: none;
+    transition: color 0.3s;
   }
 }
 
