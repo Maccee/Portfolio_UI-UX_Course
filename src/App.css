@@ -354,4 +354,9 @@ hr {
   hr {
     display: none;
   }
+  .project-card {
+    
+    width: 100%;
+    
+  }
 }
