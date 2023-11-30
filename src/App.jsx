@@ -30,21 +30,20 @@ const App = () => {
       setParallaxPosition();
     };
 
-    // Initialize the parallax position on mount
     setParallaxPosition();
 
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize); // Listen to resize event
+    window.addEventListener("resize", handleResize); 
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize); // Cleanup listener
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
     const navbar = document.getElementById("navbar");
-    const initialOffsetTop = navbar.offsetTop; // Store the initial offset value
+    const initialOffsetTop = navbar.offsetTop; 
     let sticky = false;
     const handleScroll = () => {
       if (window.innerWidth <= 600) return;

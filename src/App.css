@@ -1,5 +1,5 @@
 body::before {
-  background-position: center calc(0% - var(--scroll-amount) * 2.9);
+  background-position: center calc(50% - var(--scroll-amount) * 2.9);
   content: "";
   position: fixed;
   top: 0;
@@ -7,7 +7,7 @@ body::before {
   bottom: 0;
   left: 0;
   background-image: url(./assets/bgsmall.webp);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
   filter: sepia(1) brightness(0.15);
